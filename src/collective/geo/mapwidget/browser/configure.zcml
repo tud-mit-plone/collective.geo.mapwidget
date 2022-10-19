@@ -54,12 +54,14 @@
              zope.publisher.interfaces.browser.IBrowserRequest
              OFS.interfaces.IItem"
         factory=".widget.MapWidgets"
+        provides="collective.geo.mapwidget.interfaces.IMaps"
         />
     <adapter
         for="zope.browser.interfaces.IBrowserView
              zope.publisher.interfaces.browser.IBrowserRequest
              OFS.interfaces.IItem"
         factory=".widget.MapWidgets"
+        provides="collective.geo.mapwidget.interfaces.IMaps"
         />
 
     <!-- ..interfaces.IMapView -->
@@ -85,7 +87,8 @@
              zope.interface.Interface
              zope.interface.Interface
              ..interfaces.IMapWidget"
-        factory=".widget.MapLayers" />
+        factory=".widget.MapLayers"
+        provides="collective.geo.mapwidget.interfaces.IMapLayers" />
 
 
     <!-- Shape edit maplayers and mapwidget -->
